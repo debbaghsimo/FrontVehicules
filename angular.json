@@ -25,9 +25,20 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/css/bootstrap.css",
+              "src/assets/vendors/chartjs/Chart.min.css",
+              "src/assets/vendors/perfect-scrollbar/perfect-scrollbar.css",
+              "src/assets/css/app.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/feather-icons/feather.min.js",
+              "src/assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js",
+              "src/assets/vendors/apexcharts/apexcharts.min.js",
+              "src/assets/js/pages/dashboard.js",
+              "src/assets/js/main.js",
+              "src/assets/js/app.js"
+            ]
           },
           "configurations": {
             "production": {
