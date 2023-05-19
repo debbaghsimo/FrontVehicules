@@ -34,7 +34,8 @@
              "node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js",
              "src/assets/js/app.js",
              "src/assets/js/pages/dashboard.js",
-             "src/assets/js/main.js"
+             "src/assets/js/main.js",
+             "src/assets/vendors/simple-datatables/simple-datatables.js"
             ]
           },
           "configurations": {

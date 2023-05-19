@@ -6,7 +6,8 @@ import { SharedModule } from 'src/app/_shared/shared.module';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+  ],
   imports: [
     CommonModule,
     AdminRoutingModule,
