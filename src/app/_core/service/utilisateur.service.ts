@@ -10,7 +10,7 @@ export class UtilisateurService {
 
   constructor(private httpClient :HttpClient) { }
 
-  public url:string = "http://localhost:8181/Gestion/admin/utilisateur";
+  public url:string = "http://localhost:8181/utilisateur";
 
   ajouter(utilisateur:Utilisateur):Observable<Utilisateur>{
    return this.httpClient.post<Utilisateur>(this.url+'/add',utilisateur);
@@ -20,11 +20,11 @@ export class UtilisateurService {
     return this.httpClient.get<Utilisateur>(this.url+"/"+id);
   }
 
-  getPatient():Observable<Utilisateur[]>{
+  getUtilisateur():Observable<Utilisateur[]>{
     return this.httpClient.get<Utilisateur[]>(this.url);
   }
 
-  deketPatient(id:number):Observable<Utilisateur>{
+  deleteUtilisateur(id:number):Observable<Utilisateur>{
     return this.httpClient.delete<Utilisateur>(this.url+"/"+id);
   }
 }

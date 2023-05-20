@@ -10,7 +10,7 @@ export class VehiculeService {
 
   constructor(private httpClient :HttpClient) { }
 
-  public url:string = "http://localhost:8181/Gestion/admin/vehicule";
+  public url:string = "http://localhost:8181/vehicule";
 
   ajouter(vehicule:Vehicule):Observable<Vehicule>{
    return this.httpClient.post<Vehicule>(this.url+'/add',vehicule);
@@ -20,11 +20,15 @@ export class VehiculeService {
     return this.httpClient.get<Vehicule>(this.url+"/"+id);
   }
 
-  getPatient():Observable<Vehicule[]>{
+  getVehicule():Observable<Vehicule[]>{
     return this.httpClient.get<Vehicule[]>(this.url);
   }
 
-  deketPatient(id:number):Observable<Vehicule>{
+  deleteVehicule(id:number):Observable<Vehicule>{
     return this.httpClient.delete<Vehicule>(this.url+"/"+id);
   }
+
+modifier(vehicule:Vehicule):Observable<Vehicule>{
+  return this.httpClient.put<Vehicule>(this.url+'/update',vehicule);
+   }
 }

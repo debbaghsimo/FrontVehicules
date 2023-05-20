@@ -1,1 +1,103 @@
-<p>opertingcharcreate works!</p>
+<div class="page-title">
+  <div class="row">
+    <div class="col-12 col-md-6 order-md-1 order-last mb-4">
+      <h3>Ajouter</h3>
+    </div>
+    <div class="col-12 col-md-6 order-md-2 order-first">
+      <nav aria-label="breadcrumb" class='breadcrumb-header'>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Table</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+</div>
+<section id="multiple-column-form">
+  <div class="row match-height">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+          <a href="">
+            <button class="btn btn-danger me-1 mb-1" style="float:right">Retour</button>
+          </a>
+        </div>
+        <div class="card-content">
+          <div class="card-body">
+            <form class="form" [formGroup]="registerform" (ngSubmit)=" CRUD()">
+              <input formControlName="id" hidden="hidden">
+              <div class="row">
+                <div class="col-md-6 col-12">
+                  <div class="form-group">
+                    <label for="cruisingRange">cruisingRange</label>
+                    <input type="text" class="form-control" id="cruisingRange" formControlName="cruisingRange"
+                      name="cruisingRange" placeholder="Enter cruisingRange" required>
+                  </div>
+                </div>
+                <div class="col-md-6 col-12">
+                  <div class="form-group">
+                    <label for="fuelTankCapacity">fuelTankCapacity</label>
+                    <input type="text" class="form-control" class="form-control" id="fuelTankCapacity"
+                      formControlName="fuelTankCapacity" name="fuelTankCapacity" placeholder="Enter fuelTankCapacity"
+                      required>
+                  </div>
+                </div>
+                <div class="col-md-6 col-12">
+                  <div class="form-group">
+                    <label for="fuel">fuel</label>
+                    <input type="text" class="form-control" id="fuel" formControlName="fuel" name="fuel"
+                      placeholder="Enter fuel" required>
+                  </div>
+                </div>
+                <div class="col-md-6 col-12">
+                  <div class="form-group">
+                    <label for="acceleration">acceleration</label>
+                    <input type="text" class="form-control" id="acceleration" formControlName="acceleration"
+                      name="acceleration" placeholder="Enter acceleration" required>
+                  </div>
+                </div>
+                <div class="col-md-6 col-12">
+                  <div class="form-group">
+                    <label for="maxSpeed">maxSpeed</label>
+                    <input type="text" class="form-control" id="maxSpeed" formControlName="maxSpeed" name="maxSpeed"
+                      placeholder="Enter maxSpeed" required>
+                  </div>
+                </div>
+                <div class="col-md-6 col-12">
+                  <div class="form-group">
+                    <label for="cityDrivingFuel">cityDrivingFuel</label>
+                    <input type="text" class="form-control" id="cityDrivingFuel" formControlName="cityDrivingFuel"
+                      name="cityDrivingFuel" placeholder="Enter cityDrivingFuel" required>
+                  </div>
+                </div>
+                <div class="col-md-6 col-12">
+                  <div class="form-group">
+                    <label for="highwayDrivingFuel">highwayDrivingFuel</label>
+                    <input type="text" class="form-control" id="highwayDrivingFuel" formControlName="highwayDrivingFuel"
+                      name="highwayDrivingFuel" placeholder="Enter cityDrivingFuel" required>
+                  </div>
+                </div>
+                <div class="col-md-6 col-12">
+                  <div class="form-group">
+                    <label for="mixedDrivingFuel">mixedDrivingFuel</label>
+                    <input type="text" class="form-control" id="mixedDrivingFuel" formControlName="mixedDrivingFuel"
+                      name="mixedDrivingFuel" placeholder="Enter mixedDrivingFuel" required>
+                  </div>
+                </div><div class="col-md-6 col-12">
+                  <div class="form-group">
+                    <label for="payload">payload</label>
+                    <input type="text" class="form-control" id="payload" formControlName="payload"
+                      name="payload" placeholder="Enter payload" required>
+                  </div>
+                </div>
+                <div class="col-12 d-flex justify-content-end">
+                  <button type="submit" class="btn btn-primary me-1 mb-1">Submit</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

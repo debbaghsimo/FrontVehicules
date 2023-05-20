@@ -10,7 +10,7 @@ export class TimeService {
 
   constructor(private httpClient :HttpClient) { }
 
-  public url:string = "http://localhost:8181/Gestion/admin/time";
+  public url:string = "http://localhost:8181/time";
 
   ajouter(time:Time):Observable<Time>{
    return this.httpClient.post<Time>(this.url+'/add',time);
@@ -20,11 +20,11 @@ export class TimeService {
     return this.httpClient.get<Time>(this.url+"/"+id);
   }
 
-  getPatient():Observable<Time[]>{
+  getTime():Observable<Time[]>{
     return this.httpClient.get<Time[]>(this.url);
   }
 
-  deketPatient(id:number):Observable<Time>{
+  deleteTime(id:number):Observable<Time>{
     return this.httpClient.delete<Time>(this.url+"/"+id);
   }
 }

@@ -5,6 +5,8 @@ import { VehiculeRoutingModule } from './vehicule-routing.module';
 import { SharedModule } from 'src/app/_shared/shared.module';
 import { VehiculelistComponent } from './vehiculelist/vehiculelist.component';
 import { VehiculecreateComponent } from './vehiculecreate/vehiculecreate.component';
+import { DataTablesModule } from 'angular-datatables';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -14,8 +16,12 @@ import { VehiculecreateComponent } from './vehiculecreate/vehiculecreate.compone
   ],
   imports: [
     CommonModule,
+    FormsModule,
     VehiculeRoutingModule,
-    SharedModule
+    SharedModule,
+    DataTablesModule,
+    ReactiveFormsModule,
+    
   ]
 })
 export class VehiculeModule { }

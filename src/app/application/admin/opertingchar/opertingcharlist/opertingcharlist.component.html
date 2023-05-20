@@ -1,1 +1,60 @@
-<p>opertingcharlist works!</p>
+<div class="page-title">
+  <div class="row">
+      <div class="col-12 col-md-6 order-md-1 order-last mb-4">
+          <h3>Opertingchar</h3>
+      </div>
+      <div class="col-12 col-md-6 order-md-2 order-first">
+          <nav aria-label="breadcrumb" class='breadcrumb-header'>
+              <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Table</li>
+              </ol>
+          </nav>
+      </div>
+  </div>
+</div>
+<section class="section">
+<div class="card">
+    <div class="card-header">
+        <a [routerLink]="['add']">
+          <button class="btn btn-primary me-1 mb-1" style="float:right">Ajouter</button>
+        </a>
+    </div>
+    <div class="card-body">
+        <table class="table table-border table-striped custom-table mb-0" datatable="ng" *ngIf="OpertingcharList.length>=0" [dtOptions]="dtOptions" style="width:100%">
+            <thead>
+                <tr style="text-transform: uppercase;font-size: 11px;">
+                    <th>cruisingRange</th>
+                    <th>fuelTankCapacity</th>
+                    <th>fuel</th>
+                    <th>acceleration</th>
+                    <th>maxSpeed</th>
+                    <th>city</th>
+                    <th>highway</th>
+                    <th>mixed</th>
+                    <th>payload</th>
+                    <th>ACTION</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let opertingchar of OpertingcharList">
+                    <td>{{opertingchar.cruisingRange}}</td>
+                    <td>{{opertingchar.fuelTankCapacity}}</td>
+                    <td>{{opertingchar.fuel}}</td>
+                    <td>{{opertingchar.acceleration}}</td>
+                    <td>{{opertingchar.maxSpeed}}</td>
+                    <td>{{opertingchar.cityDrivingFuel}}</td>
+                    <td>{{opertingchar.highwayDrivingFuel}}</td>
+                    <td>{{opertingchar.mixedDrivingFuel}}</td>
+                    <td>{{opertingchar.payload}}</td>
+                    <td>
+                      <a routerLink="edit/{{opertingchar.id}}"><img src="/assets/images/icons/editer.png" width="20px"></a>
+                      <a (click)="Delete(opertingchar.id)"><img src="/assets/images/icons/supprimer.png" width="20px" style="margin-left: 25px;"></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</section>
