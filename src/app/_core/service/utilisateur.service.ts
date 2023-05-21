@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { Utilisateur } from '../model/utilisateur';
 
 @Injectable({
@@ -12,19 +12,21 @@ export class UtilisateurService {
 
   public url:string = "http://localhost:8181/utilisateur";
 
-  ajouter(utilisateur:Utilisateur):Observable<Utilisateur>{
-   return this.httpClient.post<Utilisateur>(this.url+'/add',utilisateur);
+  getUtilisateur(utilisateur:Utilisateur):Observable<Utilisateur>{
+    return this.httpClient.post<Utilisateur>(this.url,utilisateur);
   }
 
-  show(id:number):Observable<Utilisateur>{
-    return this.httpClient.get<Utilisateur>(this.url+"/"+id);
+  authentification(username:string):Observable<boolean>{
+      localStorage.setItem("username",username);
+      return of(true);
   }
 
-  getUtilisateur():Observable<Utilisateur[]>{
-    return this.httpClient.get<Utilisateur[]>(this.url);
+  isAuthentification(){
+    return localStorage.getItem("username") != null;
   }
 
-  deleteUtilisateur(id:number):Observable<Utilisateur>{
-    return this.httpClient.delete<Utilisateur>(this.url+"/"+id);
-  }
+  logout():Observable<boolean>{
+    localStorage.clear();
+    return of(true);
+  }
 }
