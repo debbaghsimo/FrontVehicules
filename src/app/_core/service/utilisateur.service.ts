@@ -10,7 +10,7 @@ export class UtilisateurService {
 
   constructor(private httpClient :HttpClient) { }
 
-  public url:string = "http://localhost:8181/utilisateur";
+  public url:string = "http://localhost:8181/auth/login";
 
   getUtilisateur(utilisateur:Utilisateur):Observable<Utilisateur>{
     return this.httpClient.post<Utilisateur>(this.url,utilisateur);
