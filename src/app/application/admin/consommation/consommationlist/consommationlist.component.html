@@ -24,25 +24,19 @@
             <table class="table table-border table-striped custom-table mb-0" *ngIf="ConsommationList.length>=0" datatable="ng" [dtOptions]="dtOptions" style="width:100%">
                 <thead>
                     <tr style="text-transform: uppercase;">
-                        <th>Modele</th>
-                        <th>Serie</th>
-                        <th>Speed</th>
-                        <th>Consommation City</th>
-                        <th>Consommation Highway</th>
-                        <th>Mixed Consommation</th>
-                        <th>Moyen Distance Parcours</th>
+                        <th>Max Speed</th>
+                        <th>cityDrivingFuel</th>
+                        <th>highwayDrivingFuel</th>
+                        <th>cruisingRange</th>
                         <th>ACTION</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr *ngFor="let Consommation of ConsommationList">
-                        <td>{{Consommation.modele}}</td>
-                        <td>{{Consommation.serie}}</td>
-                        <td>{{Consommation.speed}}</td>
-                        <td>{{Consommation.taux_consomationcity}}</td>
-                        <td>{{Consommation.taux_consomationhighway}}</td>
-                        <td>{{Consommation.mixed_consommation}}</td>
-                        <td>{{Consommation.moyen_distanceParcours}}</td>
+                        <td>{{Consommation.maxSpeed}}</td>
+                        <td>{{Consommation.cityDrivingFuel}}</td>
+                        <td>{{Consommation.highwayDrivingFuel}}</td>
+                        <td>{{Consommation.cruisingRange}}</td>
                         <td>
                           <a routerLink="edit/{{Consommation.id}}"><img src="/assets/images/icons/editer.png" width="20px"></a>
                           <a (click)="delete(Consommation.id)"><img src="/assets/images/icons/supprimer.png" width="20px" style="margin-left: 25px;"></a>

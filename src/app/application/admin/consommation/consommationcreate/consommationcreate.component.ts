@@ -98,7 +98,7 @@ export class ConsommationcreateComponent implements OnInit {
    };
    this.consommationService.ajouter(this.consommation).subscribe(res=>{
     console.log(res);
-    this.router.navigate(['/Gestion/admin/engine'])
+    this.router.navigate(['/Gestion/admin/consommation'])
    });
   }
 
@@ -112,7 +112,7 @@ export class ConsommationcreateComponent implements OnInit {
    };
    this.consommationService.modifier(this.consommation).subscribe(res=>{
     console.log(res);
-    this.router.navigate(['/Gestion/admin/engine'])
+    this.router.navigate(['/Gestion/admin/consommation'])
    });
   }
 }
