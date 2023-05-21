@@ -5,6 +5,8 @@ import { EngineRoutingModule } from './engine-routing.module';
 import { SharedModule } from 'src/app/_shared/shared.module';
 import { EnginecreateComponent } from './enginecreate/enginecreate.component';
 import { EnginelistComponent } from './enginelist/enginelist.component';
+import { DataTablesModule } from 'angular-datatables';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,7 +17,10 @@ import { EnginelistComponent } from './enginelist/enginelist.component';
   imports: [
     CommonModule,
     EngineRoutingModule,
-    SharedModule
+    SharedModule,
+    DataTablesModule,
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class EngineModule { }

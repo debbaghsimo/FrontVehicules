@@ -1,11 +1,13 @@
 export interface Opertingchar {
  id:number;
 
- cruisingRange:number;
+ cruisingRange:string;
 
  fuelTankCapacity:number;
 
  fuel:string;
+ 
+ emissionStandards:string;
 
  acceleration:number;
 

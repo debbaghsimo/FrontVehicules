@@ -14,7 +14,7 @@ import { DataTablesModule } from 'angular-datatables';
     BrowserModule,
     AppRoutingModule,
     CoreModule,
-    DataTablesModule
+    DataTablesModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

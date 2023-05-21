@@ -6,6 +6,7 @@ import { SharedModule } from 'src/app/_shared/shared.module';
 import { ConsommationlistComponent } from './consommationlist/consommationlist.component';
 import { ConsommationcreateComponent } from './consommationcreate/consommationcreate.component';
 import { DataTablesModule } from 'angular-datatables';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,7 +18,9 @@ import { DataTablesModule } from 'angular-datatables';
     CommonModule,
     ConsommationRoutingModule,
     SharedModule,
-    DataTablesModule
+    DataTablesModule,
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class ConsommationModule { }

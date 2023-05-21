@@ -9,7 +9,12 @@ const routes: Routes = [{
 },{
   path: 'add',
   component:ConsommationcreateComponent,
-}];
+},
+{
+  path: 'edit/:id',
+  component:ConsommationcreateComponent,
+}
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

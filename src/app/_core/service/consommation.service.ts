@@ -27,4 +27,7 @@ export class ConsommationService {
   deleteConsommation(id:number):Observable<Consommation>{
     return this.httpClient.delete<Consommation>(this.url+"/"+id);
   }
+ modifier(consommation:Consommation):Observable<Consommation>{
+  return this.httpClient.put<Consommation>(this.url+'/update',consommation);
+ }
 }

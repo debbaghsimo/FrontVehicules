@@ -16,164 +16,36 @@
   <section class="section">
     <div class="card">
         <div class="card-header">
-            <a href="">
+            <a [routerLink]="['add']">
               <button class="btn btn-primary me-1 mb-1" style="float:right">Ajouter</button>
             </a>
         </div>
         <div class="card-body">
-            <table class="table table-border table-striped custom-table mb-0" datatable="ng" [dtOptions]="dtOptions" style="width:100%">
+            <table class="table table-border table-striped custom-table mb-0" *ngIf="ConsommationList.length>=0" datatable="ng" [dtOptions]="dtOptions" style="width:100%">
                 <thead>
                     <tr style="text-transform: uppercase;">
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Phone</th>
-                        <th>City</th>
-                        <th>Status</th>
+                        <th>Modele</th>
+                        <th>Serie</th>
+                        <th>Speed</th>
+                        <th>Consommation City</th>
+                        <th>Consommation Highway</th>
+                        <th>Mixed Consommation</th>
+                        <th>Moyen Distance Parcours</th>
                         <th>ACTION</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Graiden</td>
-                        <td>vehicula.aliquet@semconsequat.co.uk</td>
-                        <td>076 4820 8838</td>
-                        <td>Offenburg</td>
+                    <tr *ngFor="let Consommation of ConsommationList">
+                        <td>{{Consommation.modele}}</td>
+                        <td>{{Consommation.serie}}</td>
+                        <td>{{Consommation.speed}}</td>
+                        <td>{{Consommation.taux_consomationcity}}</td>
+                        <td>{{Consommation.taux_consomationhighway}}</td>
+                        <td>{{Consommation.mixed_consommation}}</td>
+                        <td>{{Consommation.moyen_distanceParcours}}</td>
                         <td>
-                            <span class="badge bg-success">Active</span>
-                        </td>
-                        <td>
-                          <a href="#"><img src="/assets/images/icons/editer.png" width="20px"></a>
-                          <a href="#"><img src="/assets/images/icons/supprimer.png" width="20px" style="margin-left: 25px;"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Graiden</td>
-                        <td>vehicula.aliquet@semconsequat.co.uk</td>
-                        <td>076 4820 8838</td>
-                        <td>Offenburg</td>
-                        <td>
-                            <span class="badge bg-success">Active</span>
-                        </td>
-                        <td>
-                          <a href="#"><img src="/assets/images/icons/editer.png" width="20px"></a>
-                          <a href="#"><img src="/assets/images/icons/supprimer.png" width="20px" style="margin-left: 25px;"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Graiden</td>
-                        <td>vehicula.aliquet@semconsequat.co.uk</td>
-                        <td>076 4820 8838</td>
-                        <td>Offenburg</td>
-                        <td>
-                            <span class="badge bg-success">Active</span>
-                        </td>
-                        <td>
-                          <a href="#"><img src="/assets/images/icons/editer.png" width="20px"></a>
-                          <a href="#"><img src="/assets/images/icons/supprimer.png" width="20px" style="margin-left: 25px;"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Graiden</td>
-                        <td>vehicula.aliquet@semconsequat.co.uk</td>
-                        <td>076 4820 8838</td>
-                        <td>Offenburg</td>
-                        <td>
-                            <span class="badge bg-success">Active</span>
-                        </td>
-                        <td>
-                          <a href="#"><img src="/assets/images/icons/editer.png" width="20px"></a>
-                          <a href="#"><img src="/assets/images/icons/supprimer.png" width="20px" style="margin-left: 25px;"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Graiden</td>
-                        <td>vehicula.aliquet@semconsequat.co.uk</td>
-                        <td>076 4820 8838</td>
-                        <td>Offenburg</td>
-                        <td>
-                            <span class="badge bg-success">Active</span>
-                        </td>
-                        <td>
-                          <a href="#"><img src="/assets/images/icons/editer.png" width="20px"></a>
-                          <a href="#"><img src="/assets/images/icons/supprimer.png" width="20px" style="margin-left: 25px;"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Graiden</td>
-                        <td>vehicula.aliquet@semconsequat.co.uk</td>
-                        <td>076 4820 8838</td>
-                        <td>Offenburg</td>
-                        <td>
-                            <span class="badge bg-success">Active</span>
-                        </td>
-                        <td>
-                          <a href="#"><img src="/assets/images/icons/editer.png" width="20px"></a>
-                          <a href="#"><img src="/assets/images/icons/supprimer.png" width="20px" style="margin-left: 25px;"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Graiden</td>
-                        <td>vehicula.aliquet@semconsequat.co.uk</td>
-                        <td>076 4820 8838</td>
-                        <td>Offenburg</td>
-                        <td>
-                            <span class="badge bg-success">Active</span>
-                        </td>
-                        <td>
-                          <a href="#"><img src="/assets/images/icons/editer.png" width="20px"></a>
-                          <a href="#"><img src="/assets/images/icons/supprimer.png" width="20px" style="margin-left: 25px;"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Graiden</td>
-                        <td>vehicula.aliquet@semconsequat.co.uk</td>
-                        <td>076 4820 8838</td>
-                        <td>Offenburg</td>
-                        <td>
-                            <span class="badge bg-success">Active</span>
-                        </td>
-                        <td>
-                          <a href="#"><img src="/assets/images/icons/editer.png" width="20px"></a>
-                          <a href="#"><img src="/assets/images/icons/supprimer.png" width="20px" style="margin-left: 25px;"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Graiden</td>
-                        <td>vehicula.aliquet@semconsequat.co.uk</td>
-                        <td>076 4820 8838</td>
-                        <td>Offenburg</td>
-                        <td>
-                            <span class="badge bg-success">Active</span>
-                        </td>
-                        <td>
-                          <a href="#"><img src="/assets/images/icons/editer.png" width="20px"></a>
-                          <a href="#"><img src="/assets/images/icons/supprimer.png" width="20px" style="margin-left: 25px;"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Graiden</td>
-                        <td>vehicula.aliquet@semconsequat.co.uk</td>
-                        <td>076 4820 8838</td>
-                        <td>Offenburg</td>
-                        <td>
-                            <span class="badge bg-success">Active</span>
-                        </td>
-                        <td>
-                          <a href="#"><img src="/assets/images/icons/editer.png" width="20px"></a>
-                          <a href="#"><img src="/assets/images/icons/supprimer.png" width="20px" style="margin-left: 25px;"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Graiden</td>
-                        <td>vehicula.aliquet@semconsequat.co.uk</td>
-                        <td>076 4820 8838</td>
-                        <td>yassine</td>
-                        <td>
-                            <span class="badge bg-success">Active</span>
-                        </td>
-                        <td>
-                          <a href="#"><img src="/assets/images/icons/editer.png" width="20px"></a>
-                          <a href="#"><img src="/assets/images/icons/supprimer.png" width="20px" style="margin-left: 25px;"></a>
+                          <a routerLink="edit/{{Consommation.id}}"><img src="/assets/images/icons/editer.png" width="20px"></a>
+                          <a (click)="delete(Consommation.id)"><img src="/assets/images/icons/supprimer.png" width="20px" style="margin-left: 25px;"></a>
                         </td>
                     </tr>
               

@@ -44,8 +44,8 @@ export class VehiculecreateComponent implements OnInit{
         modele:this.vehicule.modele,
         generation:this.vehicule.generation,
         serie:this.vehicule.serie,
-        gearboxtype:this.vehicule.gearboxtype,
-        nmbofseat:this.vehicule.nmbofseat,
+        gearboxtype:this.vehicule.gearboxType,
+        nmbofseat:this.vehicule.nbrOfSeat,
         height:this.vehicule.height
     });
   });
@@ -56,7 +56,6 @@ export class VehiculecreateComponent implements OnInit{
     if(this.id==null){
    this.ajouter();
     }else{
-      console.log(this.vehicule);
       this.modifier();
    }
   }
@@ -67,12 +66,11 @@ export class VehiculecreateComponent implements OnInit{
       modele:this.registerform.value['modele'],
       generation:this.registerform.value['generation'],
       serie:this.registerform.value['serie'],
-      gearboxtype:this.registerform.value['gearboxtype'],
-      nmbofseat:this.registerform.value['nmbofseat'],
+      gearboxType:this.registerform.value['gearboxtype'],
+      nbrOfSeat:this.registerform.value['nmbofseat'],
       height:this.registerform.value['height']
     };
     this.vehiculeservice.ajouter(vehicule).subscribe(res=>{
-      console.log(res);
       this.router.navigate(['/Gestion/admin/vehicule']);
     })
   }
@@ -84,8 +82,8 @@ export class VehiculecreateComponent implements OnInit{
       modele:this.registerform.value['modele'],
       generation:this.registerform.value['generation'],
       serie:this.registerform.value['serie'],
-      gearboxtype:this.registerform.value['gearboxtype'],
-      nmbofseat:this.registerform.value['nmbofseat'],
+      gearboxType:this.registerform.value['gearboxtype'],
+      nbrOfSeat:this.registerform.value['nmbofseat'],
       height:this.registerform.value['height']
     };
     this.vehiculeservice.modifier(this.vehicule).subscribe(res=>{

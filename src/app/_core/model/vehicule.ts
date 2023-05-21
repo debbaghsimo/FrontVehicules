@@ -3,7 +3,7 @@ export interface Vehicule {
  modele:string;
  generation:string;
  serie:string;
- gearboxtype:string;
- nmbofseat:number;
+ gearboxType:string;
+ nbrOfSeat:number;
  height:string;
 }

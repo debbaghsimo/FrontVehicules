@@ -9,10 +9,8 @@ export interface Consommation {
 	engine:Engine;
 	opertingchar:Opertingchar;
 	time:Time;
-	modele:String;
-	serie:String;
-	speed:number;
-	consommation_city:number;
-	consommation_highway:number;
-	mixed_consommation:number;
+	maxSpeed:number;
+	cityDrivingFuel:number;
+	highwayDrivingFuel:number;
+	cruisingRange:number;
 }

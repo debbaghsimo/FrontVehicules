@@ -3,5 +3,5 @@ export interface Engine {
  enginePower:number;
  capacity:number;
  engineType:string;
- maxPower:number;
+ maxPower:string;
 }

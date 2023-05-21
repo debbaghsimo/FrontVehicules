@@ -10,21 +10,25 @@ export class EngineService {
 
   constructor(private httpClient :HttpClient) { }
 
-  public url:string = "http://localhost:8181/Gestion/admin/engine";
+  public url:string = "http://localhost:8181/engine";
 
   ajouter(engine:Engine):Observable<Engine>{
    return this.httpClient.post<Engine>(this.url+'/add',engine);
   }
 
+  modifier(engine:Engine):Observable<Engine>{
+    return this.httpClient.put<Engine>(this.url+'/update',engine);
+   }
+
   show(id:number):Observable<Engine>{
     return this.httpClient.get<Engine>(this.url+"/"+id);
   }
 
-  getPatient():Observable<Engine[]>{
+  getAll():Observable<Engine[]>{
     return this.httpClient.get<Engine[]>(this.url);
   }
 
-  deketPatient(id:number):Observable<Engine>{
+  delete(id:number):Observable<Engine>{
     return this.httpClient.delete<Engine>(this.url+"/"+id);
   }
 }
