@@ -17,7 +17,7 @@
     <div class="card">
         <div class="card-header">
             <a [routerLink]="['add']">
-              <button class="btn btn-primary me-1 mb-1" style="float:right">Ajouter</button>
+              <button class="btn btn-primary me-1 mb-1" style="float:right">+ Add</button>
             </a>
         </div>
         <div class="card-body">
@@ -25,9 +25,9 @@
                 <thead>
                     <tr style="text-transform: uppercase;">
                         <th>Max Speed</th>
-                        <th>cityDrivingFuel</th>
-                        <th>highwayDrivingFuel</th>
-                        <th>cruisingRange</th>
+                        <th>city Driving Fuel</th>
+                        <th>highway Driving Fuel</th>
+                        <th>cruising Range</th>
                         <th>ACTION</th>
                     </tr>
                 </thead>
@@ -42,7 +42,7 @@
                           <a (click)="delete(Consommation.id)"><img src="/assets/images/icons/supprimer.png" width="20px" style="margin-left: 25px;"></a>
                         </td>
                     </tr>
-              
+
                 </tbody>
             </table>
         </div>

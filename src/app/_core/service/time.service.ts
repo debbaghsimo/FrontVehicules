@@ -27,5 +27,8 @@ export class TimeService {
   deleteTime(id:number):Observable<Time>{
     return this.httpClient.delete<Time>(this.url+"/"+id);
   }
+  modifier(time:Time):Observable<Time>{
+    return this.httpClient.put<Time>(this.url+'/update',time);
+  }
 }
 

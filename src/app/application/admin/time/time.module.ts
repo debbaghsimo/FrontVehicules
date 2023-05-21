@@ -5,6 +5,8 @@ import { TimeRoutingModule } from './time-routing.module';
 import { SharedModule } from 'src/app/_shared/shared.module';
 import { TimelistComponent } from './timelist/timelist.component';
 import { TimecreateComponent } from './timecreate/timecreate.component';
+import { DataTablesModule } from 'angular-datatables';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,7 +17,10 @@ import { TimecreateComponent } from './timecreate/timecreate.component';
   imports: [
     CommonModule,
     TimeRoutingModule,
-    SharedModule
+    SharedModule,
+    DataTablesModule,
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class TimeModule { }
