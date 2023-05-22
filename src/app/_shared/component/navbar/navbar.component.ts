@@ -8,7 +8,7 @@ import { UtilisateurService } from 'src/app/_core/service/utilisateur.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-
+  username = localStorage.getItem('username');
   constructor(private utilisateur:UtilisateurService,private router:Router){
 
   }

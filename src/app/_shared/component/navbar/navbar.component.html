@@ -1,4 +1,4 @@
-<nav class="navbar navbar-header navbar-expand navbar-light">
+<nav class="navbar navbar-header navbar-expand navbar-light" style="background-color: #d3e5ff;">
   <a class="sidebar-toggler" href="#"><span class="navbar-toggler-icon"></span></a>
   <button class="btn navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,26 +36,19 @@
                   </div>
               </a>
               <div class="dropdown-menu dropdown-menu-end" >
-                  <a class="dropdown-item" href="#"><i data-feather="user"></i> Account</a>
-                  <a class="dropdown-item active" href="#"><i data-feather="mail"></i> Messages</a>
-                  <a class="dropdown-item" href="#"><i data-feather="settings"></i> Settings</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#"><i data-feather="log-out"></i> Logout</a>
+                <a class="dropdown-item"(click)="logout()" style="text-transform: uppercase;color: red;"><img src="assets/images/icons/check-out.png"> Logout</a>
               </div>
           </li>
           <li class="dropdown">
               <a href="#" data-bs-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-                  <div class="avatar me-1">
-                      <img src="assets/images/avatar/avatar-s-1.png" alt="" srcset="">
+                  <div class="avatar me-1" style="padding-bottom: 5px;">
+                      <img src="assets/images/avatar/avatar-s-1.png" >
                   </div>
-                  <div class="d-none d-md-block d-lg-inline-block">Hi, Saugi</div>
+                  <div class="d-none d-md-block d-lg-inline-block" style="text-transform: uppercase;margin-left: 5px;">{{username}}</div>
+                  <img src="assets/images/icons/drop-down-arrow.png" style="width: 12px;margin-left: 5px;padding-bottom: 3px;">
               </a>
               <div class="dropdown-menu dropdown-menu-end">
-                  <a class="dropdown-item" href="#"><i data-feather="user"></i> Account</a>
-                  <a class="dropdown-item active" href="#"><i data-feather="mail"></i> Messages</a>
-                  <a class="dropdown-item" href="#"><i data-feather="settings"></i> Settings</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item"(click)="logout()"><i data-feather="log-out"></i> Logout</a>
+                <a class="dropdown-item"(click)="logout()" style="text-transform: uppercase;color: red;"><img src="assets/images/icons/check-out.png" width="25px"><b> Logout</b></a>
               </div>
           </li>
       </ul>

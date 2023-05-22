@@ -1,25 +1,23 @@
 <div id="sidebar" class='active'>
   <div class="sidebar-wrapper active">
     <div class="sidebar-header">
-      <img src="assets/images/logo.svg" alt="" srcset="">
+      <img src="assets/images/icons/logo.png" style="height: 75px;">
     </div>
     <div class="sidebar-menu">
       <ul class="menu">
 
 
-        <li class='sidebar-title'>Main Menu</li>
-
-
 
         <li class="sidebar-item active ">
 
-          <a href="index.html" class='sidebar-link'>
+          <a [routerLink]="['/Gestion/admin/dashboard']" class='sidebar-link'>
             <img src="/assets/images/icons/house.png" width="30px">
             <span style="font-size: 15px;">Dashboard</span>
           </a>
 
 
         </li>
+        <li class='sidebar-title'>Menu</li>
         <li class="sidebar-item ">
 
           <a [routerLink]="['/Gestion/admin/vehicule']" class='sidebar-link'>
