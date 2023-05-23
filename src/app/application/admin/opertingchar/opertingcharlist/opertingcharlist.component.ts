@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Opertingchar } from 'src/app/_core/model/opertingchar';
 import { OpertingcharService } from 'src/app/_core/service/opertingchar.service';
 
@@ -8,7 +8,7 @@ import { OpertingcharService } from 'src/app/_core/service/opertingchar.service'
   styleUrls: ['./opertingcharlist.component.css']
 })
 
-export class OpertingcharlistComponent {
+export class OpertingcharlistComponent implements OnInit{
   OpertingcharList : Opertingchar[]|any;
 
   dtOptions:DataTables.Settings ={};

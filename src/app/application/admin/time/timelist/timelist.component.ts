@@ -1,5 +1,5 @@
 import { Time } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TimeService } from 'src/app/_core/service/time.service';
 
 @Component({
@@ -7,7 +7,7 @@ import { TimeService } from 'src/app/_core/service/time.service';
   templateUrl: './timelist.component.html',
   styleUrls: ['./timelist.component.css']
 })
-export class TimelistComponent {
+export class TimelistComponent implements OnInit{
   TimeList : Time[]|any;
 
   dtOptions:DataTables.Settings ={};

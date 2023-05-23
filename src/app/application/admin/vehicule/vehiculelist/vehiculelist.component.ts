@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Vehicule } from 'src/app/_core/model/vehicule';
 import { VehiculeService } from 'src/app/_core/service/vehicule.service';
 
@@ -9,7 +9,7 @@ import { VehiculeService } from 'src/app/_core/service/vehicule.service';
   styleUrls: ['./vehiculelist.component.css']
 })
 
-export class VehiculelistComponent {
+export class VehiculelistComponent implements OnInit{
   VehiculeList : Vehicule[]|any;
 
   dtOptions:DataTables.Settings ={};
